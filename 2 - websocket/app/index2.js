@@ -1,5 +1,5 @@
-import e, { Router } from "express";
-import checkAuth from './check-auth'
+import { Router } from "express";
+import checkAuth from './check-auth.js'
 
 const router = Router();
 

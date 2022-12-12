@@ -3,7 +3,9 @@ import path from 'path'
 import url from 'url'
 import express from 'express'
 import cookieSession from 'cookie-session';
-import { router } from './app';
+import { router } from './app/index2.js';
+import initWebSocket from './app/websocket.js';
+
 
 
 const app = express();
@@ -31,3 +33,5 @@ app.use(router)
 app.listen(8080, () => {
     console.log('Server is listenning to port 8080')
 })
+
+initWebSocket();
