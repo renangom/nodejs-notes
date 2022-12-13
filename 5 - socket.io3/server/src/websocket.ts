@@ -6,7 +6,7 @@ interface RoomUser{
     room:string;
 }
 
-interface Messages{
+export interface Messages{
     room:string;
     text:string;
     createdAt: Date;
@@ -34,6 +34,8 @@ io.on("connection", (client) => {
                 socket_id: client.id 
             })
         }
+
+        const messagesRoom = getMessagesRoom(data.language);
     })
 
     client.on("message", (data) => {
@@ -52,3 +54,8 @@ io.on("connection", (client) => {
     })
 })
 
+//functions
+function getMessagesRoom(room:string){
+    const messagesRoom = messages.filter(message => message.room === room)
+    return messagesRoom
+}

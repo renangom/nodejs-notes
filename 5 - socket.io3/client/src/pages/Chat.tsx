@@ -19,7 +19,8 @@ export const Chat = () => {
     socket.emit("select_room", {
         name,
         language
-    })
+    });
+
     const handleMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
         text = inputValue;
@@ -48,7 +49,7 @@ export const Chat = () => {
                     Você está na sala de: {language}
                     {messages.map((message) => {
                         return (
-                            <div>{message.name}: {message.mensagem}</div>
+                            <div>{message.name}: {message.mensagem} - <b>{}</b></div>
                         )
                     })}
                 </div>

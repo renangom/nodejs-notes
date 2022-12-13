@@ -1,3 +1,5 @@
+import { Messages } from "./src/websocket";
+
 interface dataRoom{
   name:string;
   language: string;
@@ -20,13 +22,13 @@ interface dataReceiveMessage{
 export interface ServerToClientEvents {
     noArg: () => void;
     basicEmit: (a: number, b: string, c: Buffer) => void;
-    withAck: (d: string, callback: (e: number) => void) => void;
+    withAck: (d: string, callback?: (e: number) => void) => void;
     receiveMessage: (dados:dataSendMessage) =>  any;
   }
   
 export interface ClientToServerEvents {
     hello: () => void;
-    select_room: (data:dataRoom) => void;
+    select_room: (data:dataRoom, callback:(param:Messages[]) => Messages[]) => void;
     message: (data:dataReceiveMessage) => void;
   }
   
