@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom'
+import "../app.css"
 
 
 export const Home = () => {
@@ -21,16 +22,16 @@ export const Home = () => {
         localStorage.setItem("language", language)
         localStorage.setItem("user", name)
         return (
-            <div className="App">
-            <div>
+            <div className="">
+            <div className="container">
                 <form onSubmit={handleSubmit}>
-                <select name="languages" onChange={handleLanguages}>
+                <select className="select" name="languages" onChange={handleLanguages}>
                     <option> Selecione a sala</option>
                     <option value="java"> Java </option>
                     <option value="javascript"> JavaScript </option>
                     <option value="php"> PHP </option>
                 </select>
-                <input type='text' onChange={(e) => setName(e.target.value)}/>
+                <input type='text' placeholder="Digite seu nome" onChange={(e) => setName(e.target.value)}/>
                 <button type="submit"> Entrar </button>
                 </form>
             </div>

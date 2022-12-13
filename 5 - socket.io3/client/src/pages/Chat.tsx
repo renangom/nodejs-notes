@@ -46,12 +46,14 @@ export const Chat = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className="message">
-                    Você está na sala de: {language}
-                    {messages.map((message) => {
-                        return (
-                            <div>{message.name}: {message.mensagem} - <b>{}</b></div>
-                        )
-                    })}
+                    Você está na sala de <b> {language} </b>
+                    <div className='chat'>
+                        {messages.map((message) => {
+                            return (
+                                <div className='text'><b>{message.name}</b>: {message.mensagem} - <b>{}</b></div>
+                            )
+                        })}
+                    </div>
                 </div>
                 <input type='text' placeholder='Digite sua mensagem' onChange={handleMessage} />
                 <button type='submit'> Enviar </button>

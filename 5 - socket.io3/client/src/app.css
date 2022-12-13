@@ -8,15 +8,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(238,205,205,1) 100%);    
 }
 
-.App{
-    padding: 30px;
+.container{
+    padding: 70px;
     border-radius: 10px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(183,241,252,1) 100%);
+    box-shadow: 1px 2px 20px #404040;
+    
 }
 
 form{
@@ -27,16 +27,50 @@ form{
 
 form input{
     padding: 10px;
-    border-radius: 10px;
     border: none;
     outline: none;
     border: 1px solid #404040;
+}
+.select{
+    padding: 10px;
 }
 
 form button {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    background-color: blueviolet;
+    background-color: crimson;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+form button:hover{
+    background-color: crimson;
+    opacity: 0.9;
+}
+
+.chat {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #404040;
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.chat::-webkit-scrollbar{
+    width: 10px;
+    height: 0px;
+}
+.chat::-webkit-scrollbar-track {
+    background: transparent;
+}
+.chat::-webkit-scrollbar-thumb{
+    background-color: #404040;
+    border-radius: 20px;
+    border: 3px solid #404040;
+}
+
+.text{
+    margin: 5px;
 }
