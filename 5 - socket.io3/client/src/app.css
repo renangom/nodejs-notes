@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.App{
+    padding: 30px;
+    border-radius: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(183,241,252,1) 100%);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #404040;
+}
+
+form button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
