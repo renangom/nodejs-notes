@@ -1,6 +1,6 @@
 import {exec} from 'child_process';
 
-const cmd = 'dir';
+const cmd = 'ls';
 
 exec(cmd, (err, stdout, stderr) => {
     if(err) {
