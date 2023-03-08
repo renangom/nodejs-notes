@@ -1,6 +1,3 @@
-Renan: Olá, alguém por ai? 
-Maria: Eu, estou por aqui!
-Renan: Como está, Maria?
-Maria: Estou bem, e você?
-Renan: Tudo certo!!
-Maria: Que bom!!
+Hello
+World
+!
