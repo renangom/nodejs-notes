@@ -5,7 +5,7 @@ const options = {
     encoding: "utf8",
 };
 
-const readStream = createReadStream('./text.txt', options);
+const readStream = createReadStream('./8 - Streams/text.txt', options);
 
 readStream.on('readable', () => {
     const data = readStream.read();
