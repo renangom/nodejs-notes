@@ -24,7 +24,7 @@ class EventLogger extends EventEmitter {
     }
 }
 
-const logger = new EventLogger('./error.log', ['ERR', 'WARN']);
+const logger = new EventLogger('error.log', ['ERR', 'WARN']);
 logger.emit('error', 'Something happened');
 logger.emit('warning', 'Something else happened');
 logger.emit('info', 'Not relevant');
