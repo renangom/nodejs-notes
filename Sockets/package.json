@@ -1,12 +1,12 @@
 {
-  "name": "11---sockets",
+  "name": "sockets",
   "version": "1.0.0",
   "description": "",
-  "main": "UnixSocket.js",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev -r UnixSocketServerWindows.ts"
+    "dev": "ts-node-dev Server.ts",
+    "client": "ts-node-dev Client.ts"
   },
   "keywords": [],
   "author": "",
