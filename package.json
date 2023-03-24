@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/renangom/nodejs-notes/issues"
   },
-  "homepage": "https://github.com/renangom/nodejs-notes#readme"
+  "homepage": "https://github.com/renangom/nodejs-notes#readme",
+  "devDependencies": {
+    "jasmine": "^4.6.0"
+  }
 }

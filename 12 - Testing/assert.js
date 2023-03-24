@@ -1,4 +1,4 @@
-import {strictEqual, throws} from 'assert'
+import {strictEqual, throws, rejects} from 'assert'
 import {add, asyncFunction} from './functions.js';
 
 
@@ -12,6 +12,8 @@ strictEqual(text, 'Hello World');
 throws(() => add('1', 2), Error);
 
 //third test
-asyncFunction(true, 'Hello World').then((data) => {
-    strictEqual(data, 'Hello World')
-});
+const data = await asyncFunction(true, 'Hello World');
+strictEqual(data, 'Hello World');
+
+//fourth test
+rejects(() => asyncFunction(false, 'Fail'));
