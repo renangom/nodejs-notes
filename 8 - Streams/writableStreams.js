@@ -6,7 +6,7 @@ const writeStream = createWriteStream('./8 - Streams/output.txt');
 readStream.on('readable', () => {
     const data = readStream.read();
     if(data) {
-        writeStream.write(data + '\n');
+        writeStream.write(data + ' Olá');
         writeStream.end(null);
     }
 });

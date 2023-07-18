@@ -14,7 +14,7 @@ describe('Calc', () => {
         })
 
         it('should throw an error', () => {
-            expect(calc.add('1', 1)).toThrow();
+            expect(calc.add('1', 1)).toThrow(Error);
         })
     })
 })
