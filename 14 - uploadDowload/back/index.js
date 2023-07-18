@@ -1,10 +1,12 @@
 import express from 'express';
 import fs from 'fs'
+import http from 'http'
 import cors from 'cors'
 import multer from 'multer';
 import path from 'path'
 
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 
@@ -23,7 +25,7 @@ const upload = multer({storage});
 
 app.post('/upload', upload.single('imagem'), (req, res) => {
     res.status(200).json({message: "Imagem recebida e salva"})
-})
+});
 
 
 app.listen(3000, () => {
